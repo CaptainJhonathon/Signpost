@@ -13,7 +13,7 @@ const items = ref([
     <h1>this is replay</h1>
     <form method="post">
         <input type="datetime-local" v-model="datetime">
-        <p>datetime input is <h1>{{ datetime }}</h1></p>
+        <p>datetime input is <strong>{{ datetime }}</strong></p>
         <!-- <input type="submit"> 
          NOTE: make submission automatic
         -->

@@ -14,5 +14,7 @@ import replay from './components/replay.vue';
 </template>
 
 <style scoped>
-
+    .navigator{
+        
+    }
 </style>
