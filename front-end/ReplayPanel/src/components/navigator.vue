@@ -1,4 +1,5 @@
 <script setup>
+import userWindows from './userWindows.vue';
 import { ref } from 'vue';
 let id = 0
 const pages = ref([
@@ -10,6 +11,8 @@ const pages = ref([
 </script>
 
 <template>
+    <img src="../assets/logo.svg" alt="Our logo image" id="logo">
+
     <ul>
         <li v-for="page in pages" :key="page.id">
             <a :href="page.tsrc">
@@ -17,18 +20,23 @@ const pages = ref([
             </a>
         </li>
     </ul>
+
+    <div><userWindows></userWindows></div>
 </template>
 
 <style scoped>
     ul{
         list-style-type: none;
         display: flex;
-        border-style: solid;
-        border-width: 2px;
-        padding-left: 10%;
+        padding-left: 6px;
+        margin: 0px;
     }
     li{
         margin: 5px;
         margin-right: 15px;
+    }
+    #logo{
+        width: 20px;
+        height: 30px;
     }
 </style>
