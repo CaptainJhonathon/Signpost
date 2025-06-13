@@ -10,7 +10,6 @@ const pages = ref([
 </script>
 
 <template>
-    <h1>this is navigator</h1>
     <ul>
         <li v-for="page in pages" :key="page.id">
             <a :href="page.tsrc">
@@ -26,11 +25,10 @@ const pages = ref([
         display: flex;
         border-style: solid;
         border-width: 2px;
-        padding-left: 20%;
+        padding-left: 10%;
     }
     li{
         margin: 5px;
-        border-style: solid;
-        border-width: 2px;
+        margin-right: 15px;
     }
 </style>

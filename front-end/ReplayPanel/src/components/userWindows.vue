@@ -2,6 +2,7 @@
 import { ref } from "vue";
 function goLogin() {
     window.location.assign("")
+    // remember to add the login url
 }
 </script>
 

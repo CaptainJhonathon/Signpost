@@ -6,7 +6,6 @@ import replay from './components/replay.vue';
 </script>
 
 <template>
-    <h1>Hello,World!</h1>
     <div id="navigator"><navigator></navigator></div>
     <div id="statusBar"><statusBar></statusBar></div>
     <div id="platforms"><platforms></platforms></div>
@@ -14,7 +13,8 @@ import replay from './components/replay.vue';
 </template>
 
 <style scoped>
-    .navigator{
-        
+    #navigator{
+        background-color: rgb(179, 170, 170);
+        margin: 0px;
     }
 </style>
