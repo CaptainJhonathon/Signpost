@@ -1,22 +1,24 @@
-from flask import Flask, render_template
+from flask import Flask, render_template \
+    , send_from_directory
 from flask_sqlalchemy import SQLAlchemy
 
-app = Flask(__name__)
-app.config.from_object("config")
+app = Flask(__name__, static_folder="static")
+# app.config.from_object("config")
 
 @app.route("/")
 def Gateway():
-    return render_template("debug.html", site_name="Gateway")
+    return send_from_directory(app.static_folder, 'index.html')
+    # return render_template("debug.html", site_name="Gateway")
 
 @app.route("/home")
 def Home():
     return render_template("debug.html", site_name="Home page")
 
-@app.route("/truthladder")
+@app.route("/document")
 def TruthLadder():
     return render_template("debug.html", site_name="Truth Ladder")
 
-@app.route("/chatting")
+@app.route("/replaypanel")
 def Chatting():
     return render_template("debug.html", site_name="Chatting")
 

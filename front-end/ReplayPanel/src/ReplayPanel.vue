@@ -1,7 +1,9 @@
 <script setup>
+import { createApp } from "vue";
 import navigator from './components/navigator.vue';
 import platforms from './components/platforms.vue';
 import replay from './components/replay.vue';
+
 </script>
 
 <template>

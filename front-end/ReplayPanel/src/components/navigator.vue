@@ -3,10 +3,10 @@ import userWindows from './userWindows.vue';
 import { ref } from 'vue';
 let id = 0
 const pages = ref([
-    {id: id++, text:"Home", tsrc:"Home"},
-    {id: id++, text:"Document", tsrc:"Document"},
-    {id: id++, text:"ReplayPanel", tsrc:"ReplayPanel"},
-    {id: id++, text:"About", tsrc:"About"}
+    {id: id++, text:"Home", tsrc:"home"},
+    {id: id++, text:"Document", tsrc:"document"},
+    {id: id++, text:"ReplayPanel", tsrc:"replaypanel"},
+    {id: id++, text:"About", tsrc:"about"}
 ])
 </script>
 
