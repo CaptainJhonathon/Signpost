@@ -6,8 +6,10 @@ import replay from './components/replay.vue';
 
 <template>
     <div id="navigator"><navigator></navigator></div>
-    <div id="platforms"><platforms></platforms></div>
-    <div id="replay"><replay></replay></div>
+    <div id="panel">
+        <div id="platforms"><platforms></platforms></div>
+        <div id="replay"><replay></replay></div>
+    </div>
 </template>
 
 <style scoped>
@@ -19,7 +21,22 @@ import replay from './components/replay.vue';
         top: 0px;
         width: 100%;
     }
-    #platforms{
 
+    #panel{
+        position: static;
+        display: flex;
+        margin-top: 5%;
     }
+    #platforms{
+        
+        border: 2px solid;
+        width: 20%;
+        height: 100%;
+    }
+    #replay{
+        
+        border: 2px solid;
+        width: 80%;
+    }
+    
 </style>

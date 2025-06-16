@@ -7,7 +7,6 @@ function goLogin() {
 </script>
 
 <template>
-    <div id="userIcon"></div>
     <div id="Interact">
         <button type="button" @click="goLogin">
             Login/Register
@@ -16,5 +15,10 @@ function goLogin() {
 </template>
 
 <style scoped>
-
+    button{
+        border: none;
+        background-color: inherit;
+    }button:hover{
+        cursor: pointer;
+    }
 </style>

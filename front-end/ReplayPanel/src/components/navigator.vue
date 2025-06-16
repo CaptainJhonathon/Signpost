@@ -11,7 +11,9 @@ const pages = ref([
 </script>
 
 <template>
-    <img src="../assets/logo.svg" alt="Our logo image" id="logo">
+    <a href="http://localhost:8080" id="logolink">
+        <img src="../assets/logo.svg" alt="Our logo image" id="logo">
+    </a>
 
     <ul>
         <li v-for="page in pages" :key="page.id">
@@ -21,7 +23,7 @@ const pages = ref([
         </li>
     </ul>
 
-    <div><userWindows></userWindows></div>
+    <div id="userWindows"><userWindows></userWindows></div>
 </template>
 
 <style scoped>
@@ -29,14 +31,31 @@ const pages = ref([
         list-style-type: none;
         display: flex;
         padding-left: 6px;
-        margin: 0px;
+        margin: 2px;
     }
     li{
         margin: 5px;
         margin-right: 15px;
     }
+    a{
+        color: black;
+        text-decoration: none;
+    }a:hover{
+        cursor: pointer;
+        font-style: italic;
+    }
     #logo{
         width: 20px;
-        height: 30px;
+        height: 35px;
+        margin-right: 10px;
+    }#logolink{
+        margin: 0px;
+    }
+    #userWindows{
+        margin-left: 10px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        position: fixed;
+        right: 5%;
     }
 </style>

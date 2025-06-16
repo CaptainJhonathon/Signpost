@@ -10,8 +10,7 @@ const items = ref([
 </script>
 
 <template>
-    <h1>this is replay</h1>
-    <form method="post">
+    <form method="post" id="DT">
         <input type="datetime-local" v-model="datetime">
         <p>datetime input is <strong>{{ datetime }}</strong></p>
         <!-- <input type="submit"> 
@@ -27,6 +26,9 @@ const items = ref([
 </template>
 
 <style scoped>
+    #DT{
+        margin: 4px 4px 4px;
+    }
     ul{
         list-style-type: none;
     }
