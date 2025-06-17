@@ -1,7 +1,7 @@
 <script setup>
 // import { ref } from "vue";
 function goLogin() {
-    window.location.assign("")
+    window.location.assign("lgrg")
     // remember to add the login url
 }
 </script>
