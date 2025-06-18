@@ -1,13 +1,51 @@
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
-    <link rel="" href="">
+    <link rel="icon" href="./src/assets/logo.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signpost</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <div id="clear">
+      <div id="app"></div>
+      <script type="module" src="/src/main.js"></script>
+      <div id="manual">
+        <div id="content">content</div>
+        <div id="article">article</div>
+      </div>
+    </div>
   </body>
 </html>
+
+<style scoped>
+  body{
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-image: url(./src/assets/moon.png);
+    background-repeat: no-repeat;
+  }
+  #clear{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 1;
+  }
+  #manual{
+    margin-top: 5%;
+    display: flex;
+  }
+  #content{
+    margin-right: 10px;
+    padding-right: 5px;
+    border-right: 2px solid;
+  }
+  #article{
+
+  }
+</style>

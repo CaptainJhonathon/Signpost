@@ -4,13 +4,13 @@ import { ref } from "vue";
 function jumping(turl) {
   window.location.assign(turl)
 }
-let Murl = "http://localhost:8080/"
+// let Murl = "http://localhost:8080/"
 let id = 0;
 const items = ref([
-  { id: id++, text: "Document", tsrc:Murl+"document"},
-  { id: id++, text: "Login/Register", tsrc:Murl+"lgrg"},
-  { id: id++, text: "ReplayPanel", tsrc:Murl+"replaypanel"},
-  { id: id++, text: "About", tsrc:Murl+"about"}
+  { id: id++, text: "Document", content:"want to learn?", tsrc:"document"},
+  { id: id++, text: "Login/Register", content:"want a personal place?", tsrc:"lgrg"},
+  { id: id++, text: "ReplayPanel", content:"need replay?", tsrc:"replaypanel"},
+  { id: id++, text: "About", content:"curiosity for this and us?", tsrc:"about"}
 ])
 
 </script>
@@ -18,7 +18,8 @@ const items = ref([
 <template>
   <ul>
     <li v-for="item in items" :key="item.id" @click="jumping(item.tsrc)">
-      {{ item.text }}
+      <h3>{{ item.text }}</h3>
+      <p>{{ item.content }}</p>
     </li>
   </ul>
 </template>
@@ -37,5 +38,11 @@ const items = ref([
     background-color: blanchedalmond;
   }li:hover{
     cursor: pointer;
+  }
+  h3{
+    margin-bottom: 5px;
+  }
+  p{
+    margin-top: 5px;
   }
 </style>
