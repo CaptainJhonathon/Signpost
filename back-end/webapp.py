@@ -1,9 +1,16 @@
 from flask import Flask, render_template \
     , send_from_directory, url_for
-from flask_sqlalchemy import SQLAlchemy
+#from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__, static_folder='assets')
 # app.config.from_object("config")
+
+# # for Nginx reverse proxy
+from werkzeug.middleware.proxy_fix import ProxyFix
+app.wsgi_app = ProxyFix(
+    app.wsgi_app, x_for=1, x_proto=1, x_host=1, x_prefix=1
+)
+# # 
 
 @app.route("/")
 @app.route("/home")
@@ -26,6 +33,9 @@ def About():
 def LoginRegister():
     return render_template("loginregister/index.html")
 
-# for this singal debug
-if __name__ == "__main__":
-    app.run(debug=True, port=8080)
+# for debug
+# if __name__ == "__main__":
+#     app.run(debug=True, port=8080)
+
+# to run uWSGI:
+# ./uwsgi --http 127.0.0.1:8080 --master -p 2 -w webapp:app
