@@ -35,7 +35,7 @@ def LoginRegister():
 
 # for debug
 # if __name__ == "__main__":
-#     app.run(debug=True, port=8080)
+#     app.run(debug=True, port=8080, host="127.0.0.1", ssl_context=("./back-end/tcert.pem","./back-end/tkey.pem"))
 
 # to run uWSGI:
 # ./uwsgi --http 127.0.0.1:8080 --master -p 2 -w webapp:app
