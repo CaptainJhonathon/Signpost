@@ -17,5 +17,3 @@
 >    SQLite3  
 >    MySQL
 
----
-# All rights reserve by En-TecH and The-Truth-Ladder
