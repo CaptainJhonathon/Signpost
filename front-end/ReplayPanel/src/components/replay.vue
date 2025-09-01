@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+import queue from './queue.vue';
 
 const datetime = ref("")
 
@@ -23,6 +24,8 @@ const items = ref([
             {{ item.text }}
         </li>
     </ul>
+
+    <div id="queue"><queue></queue></div>
 </template>
 
 <style scoped>
